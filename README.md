@@ -3,18 +3,40 @@ An AI-powered multimodal healthcare assistant designed to make medical consultat
 This project provides a voice and image-enabled AI doctor assistant with a simple, chat-like interface. Patients can speak their symptoms, upload medical images, or type messages. The AI processes inputs, maintains conversational memory, and delivers accurate, accessible responses—both in text and speech.**
 
 # Tech Stack:
-Frontend/UI: Gradio (dark-theme, chat interface)
-Voice Processing: Whisper (speech-to-text), gTTS (text-to-speech), FFmpeg & PortAudio
-Image Processing: Base64 encoding + Groq LLM for analysis
-AI Core: LangChain + Groq LLM for reasoning and medical consultation
-APIs: Groq API (LLM services), Google TTS, Whisper
-Memory Management: Conversational buffer memory for context-aware interactions
+Frontend/UI:
+  Gradio (dark-theme, chat interface)
+
+Voice Processing:
+  Whisper (speech-to-text)
+  
+gTTS (text-to-speech):
+  FFmpeg & PortAudio
+
+Image Processing:
+  Base64 encoding
+
+Groq LLM for analysis
+
+AI Core:
+  LangChain + Groq LLM for reasoning & medical consultation
+
+APIs:
+  Groq API (LLM services)
+  Google TTS
+  Whisper
+
+Memory Management:
+  Conversational buffer memory for context-aware interactions
 
 # Pipeline
-Input Layer – Text, Voice, or Image provided by the patient.
-Processing Layer – Voice → text, image → encoded data, text → processed query.
-AI Processing – LangChain + Groq LLM analyze and generate medical responses.
-Output Layer – Response displayed in chat + optional audio playback via TTS.
+Input Layer:
+  Text, Voice, or Image provided by the patient.
+Processing Layer:
+  Voice → text, image → encoded data, text → processed query.
+AI Processing:
+  LangChain + Groq LLM analyze and generate medical responses.
+Output Layer:
+  Response displayed in chat + optional audio playback via TTS.
 
 # Project Structure
 ├── gradio_app.py             # User Interface (chat, voice, image input)
